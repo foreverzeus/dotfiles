@@ -2,6 +2,7 @@
 # zshenv has already started PATH with rbenv so append only here
 #export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/bin
 export PATH=$PATH:/usr/local/sbin:$HOME/bin
+export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/platform-tools/
 
 # remove duplicate entries
 typeset -U PATH
