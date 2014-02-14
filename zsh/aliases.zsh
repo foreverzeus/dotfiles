@@ -249,3 +249,6 @@ alias nomz='ps aux | less'
 alias nomnom='killall'
 alias cya='reboot'
 alias kthxbai='halt'
+
+alias logcatc='logcat-color'
+alias cocos='cd /Users/foreverzeus/coding/cocos2d-x-2.2.2/tools/project-creator'

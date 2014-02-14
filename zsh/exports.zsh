@@ -3,6 +3,18 @@
 #export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/bin
 export PATH=$PATH:/usr/local/sbin:$HOME/bin
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/platform-tools/
+export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/tools/
+export ANDROID_HOME=/Users/foreverzeus/coding/android/sdk/
+export ANT_HOME=/Users/foreverzeus/coding/android/apache-ant-1.8.3/
+export PATH=${PATH}:${ANT_HOME}/bin
+
+export COCOS2DX_ROOT=/Users/foreverzeus/coding/cocos2d-x-2.2.2
+export PATH=$COCOS2DX_ROOT:$PATH
+
+export NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r9c
+export ANDROID_NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r9c
+export PATH=$ANDROID_NDK_ROOT:$PATH
+
 
 # remove duplicate entries
 typeset -U PATH
