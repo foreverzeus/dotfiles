@@ -1,6 +1,9 @@
 # Currently this path is appended to dynamically when picking a ruby version
 # zshenv has already started PATH with rbenv so append only here
 #export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/bin
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
+export JAVA_HOME
+export PATH=${JAVA_HOME}/bin:$PATH
 export PATH=$PATH:/usr/local/sbin:$HOME/bin
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/platform-tools/
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/tools/

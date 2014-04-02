@@ -35,6 +35,8 @@ Bundle 'benmills/vimux'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'NERD_tree-Project'
+Bundle 'The-NERD-tree'
 
 if has('autocmd')
   filetype plugin indent on    " enable plugins, detection and indenting
@@ -72,7 +74,8 @@ set wrap                          " use line wrapping
 set textwidth=79                  " at column 79
 set ruler                         " display current cursor position
 set list                          " show invisible characters
-set listchars=tab:▸\ ,eol:¬,trail:⋅,nbsp:␣,extends:❯,precedes:❮
+"set listchars=tab:▸\ ,eol:¬,trail:⋅,nbsp:␣,extends:❯,precedes:❮
+set listchars=tab:▸\ ,trail:⋅,nbsp:␣,extends:❯,precedes:❮
 set showmatch                     " show matching brackets
 if exists("&relativenumber")
   set relativenumber              " use relative line numbers
