@@ -58,6 +58,10 @@ set timeout timeoutlen=1000 ttimeoutlen=500
 " ex mode commands made easy
 nnoremap ; :
 nnoremap Q <nop>
+nnoremap gw <C-W><C-W>
+map tn :tabnext<cr>
+map tp :tabprevious<cr>
+map tc :tabclose<cr>
 
 " -------------------------------------------------------------------
 " basic options
