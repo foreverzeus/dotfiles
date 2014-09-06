@@ -1,9 +1,10 @@
 # Currently this path is appended to dynamically when picking a ruby version
 # zshenv has already started PATH with rbenv so append only here
-#export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/bin
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/bin
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/
 export JAVA_HOME
 export PATH=${JAVA_HOME}/bin:$PATH
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:/usr/local/sbin:$HOME/bin
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/platform-tools/
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/tools/
@@ -11,21 +12,25 @@ export ANDROID_HOME=/Users/foreverzeus/coding/android/sdk/
 export ANT_HOME=/Users/foreverzeus/coding/android/apache-ant-1.8.3/
 export PATH=${PATH}:${ANT_HOME}/bin
 
-export COCOS2DX_ROOT=/Users/foreverzeus/coding/cocos2d-x-2.2.2
-export PATH=$COCOS2DX_ROOT:$PATH
+export COCOS2DX_ROOT=/Users/foreverzeus/coding/cocos2d-x-3.1.1
+export PATH=$PATH:$COCOS2DX_ROOT
+export COCOS_CONSOLE_ROOT=${COCOS2DX_ROOT}/tools/cocos2d-console/bin
+export PATH=$PATH:$COCOS_CONSOLE_ROOT
 
 export NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r9c
 export ANDROID_NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r9c
-export PATH=$ANDROID_NDK_ROOT:$PATH
+export PATH=$PATH:$ANDROID_NDK_ROOT
 
+# apk tools
+export PATH=${PATH}:/Users/foreverzeus/Dropbox/apk_tools/dex2jar-0.0.9.15
 
 # remove duplicate entries
 typeset -U PATH
 
 # Set default console Java to 1.6
-if [[ $IS_MAC -eq 1 ]]; then
-    export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
-fi
+#if [[ $IS_MAC -eq 1 ]]; then
+#    export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+#fi
 
 # Setup terminal, and turn on colors
 export TERM=xterm-256color

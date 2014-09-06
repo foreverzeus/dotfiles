@@ -250,5 +250,10 @@ alias nomnom='killall'
 alias cya='reboot'
 alias kthxbai='halt'
 
-alias logcatc='logcat-color'
-alias cocos='cd /Users/foreverzeus/coding/cocos2d-x-2.2.2/tools/project-creator'
+#alias logcatc='logcat-color'
+alias logcatc="adb logcat -C -v time process "
+alias logmm="adb logcat -C -v time process  | grep  `adb shell ps | egrep "com.tencent.mm" | grep -v "push" | grep -v "cool" | awk '{print $2}'` | grep -v "D/StrictMode""
+#alias cocos='cd /Users/foreverzeus/coding/cocos2d-x-2.2.2/tools/project-creator'
+alias amminstall="adb install -r  buck-out/gen/app/amm_app_preview_debug.apk"
+alias ammcrash="adb logcat -v time process  | grep -e 'MMCrashReporter' -e 'AndroidRuntime'"
+alias ammcrashc="logcatc  | grep -e 'MMCrashReporter' -e 'AndroidRuntime'"
