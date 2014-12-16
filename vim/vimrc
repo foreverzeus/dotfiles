@@ -37,6 +37,13 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'NERD_tree-Project'
 Bundle 'The-NERD-tree'
+"Bundle 'Pydiction'
+Bundle 'Valloric/YouCompleteMe'
+Bundle "kien/ctrlp.vim"
+"Bundle "nathanaelkane/vim-indent-guides"
+Bundle "Yggdroot/indentLine"
+Bundle 'taglist.vim' 
+
 
 if has('autocmd')
   filetype plugin indent on    " enable plugins, detection and indenting
@@ -58,7 +65,7 @@ set timeout timeoutlen=1000 ttimeoutlen=500
 " ex mode commands made easy
 nnoremap ; :
 nnoremap Q <nop>
-nnoremap gw <C-W><C-W>
+nnoremap mm <C-W><C-W>   "switch the windows
 map tn :tabnext<cr>
 map tp :tabprevious<cr>
 map tc :tabclose<cr>
@@ -81,9 +88,9 @@ set list                          " show invisible characters
 "set listchars=tab:▸\ ,eol:¬,trail:⋅,nbsp:␣,extends:❯,precedes:❮
 set listchars=tab:▸\ ,trail:⋅,nbsp:␣,extends:❯,precedes:❮
 set showmatch                     " show matching brackets
-if exists("&relativenumber")
-  set relativenumber              " use relative line numbers
-endif
+"if exists("&relativenumber")
+"  set relativenumber              " use relative line numbers
+"endif
 set number                        " except for the current line - absolute number there
 set backspace=indent,eol,start    " make backspace behave in a sane manner
 set mousehide                     " hide mouse when typing
@@ -161,6 +168,8 @@ set noswapfile
 " -------------------------------------------------------------------
 set background=dark
 silent! colorscheme Tomorrow-Night-Bright
+"set background=dark
+"silent! colorscheme solarized
 
 " -------------------------------------------------------------------
 " Set tab stuff
@@ -311,7 +320,7 @@ if has("autocmd")
 
   " Python files
   let NERDTreeIgnore = ['\.pyc$', '\~$', '\.rbc$']
-  autocmd BufNewFile,BufRead *.py set ts=2 sts=2 sw=2 expandtab
+  autocmd BufNewFile,BufRead *.py set ts=2 sts=4 sw=4 expandtab
 
 endif
 
@@ -320,8 +329,8 @@ endif
 " -------------------------------------------------------------------
 
 " Command-t
-nmap <leader>t :CommandT <CR>
-nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
+"nmap <leader>t :CommandT <CR>
+"nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
 
 " vim-airline settings
 let g:airline_left_sep=''
@@ -337,6 +346,14 @@ let g:VimuxHeight = "30"
 let g:VimuxOrientation = "v"
 let g:VimuxUseNearestPane = 0
 
+"vim indent
+"let g:indent_guides_guide_size=1
+"let g:indent_guides_auto_colors = 0
+"hi IndentGuidesOdd  guibg=red   ctermbg=3
+"hi IndentGuidesEven guibg=green ctermbg=4
+"
+"indentline
+let g:indentLine_char = '¦'
 " Vimux Mappings
 nmap <leader>vp :VimuxPromptCommand<cr>
 nmap <leader>vl :VimuxRunLastCommand<cr>
@@ -362,6 +379,26 @@ hi MBEVisibleNormal        ctermfg=147 ctermbg=235
 hi MBEVisibleChanged       ctermfg=164 ctermbg=235
 hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
 hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
+
+
+"my config
+set cursorcolumn
+"hi CursorColumn guibg=lightblue ctermbg=underline guifg=black ctermfg=underline
+
+map <F8> :ToggleNERDTree<CR>
+
+let g:ycm_autoclose_preview_window_after_completion = 1
+set nohlsearch
+
+"go to last
+autocmd BufReadPost *
+\ if line("'\"")>0&&line("'\"")<=line("$") |
+\ exe "normal g'\"" |
+\ endif
+
+let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Auto_Open = 1  "自动打开tlist
+map <silent> <F9> :TlistToggle<cr>
 
 " -------------------------------------------------------------------
 "  finis
