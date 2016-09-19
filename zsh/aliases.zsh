@@ -251,11 +251,25 @@ alias cya='reboot'
 alias kthxbai='halt'
 
 #alias logcatc='logcat-color'
-alias logcatc="adb logcat -C -v time process "
+alias logcatc="adb logcat -C -v threadtime process "
 #alias logmm="adb logcat -C -v time process  | grep  `adb shell ps | egrep 'com.tencent.mm' | grep -v 'push' | grep -v 'cool' | awk '{print $2}'` | grep -v 'D/StrictMode'"
 #alias cocos='cd /Users/foreverzeus/coding/cocos2d-x-2.2.2/tools/project-creator'
 alias ammstart="adb shell am start -n com.tencent.mm/.ui.LauncherUI"
-alias amminstall="adb install -r  buck-out/gen/app/amm_app_preview_debug.apk && ammstart"
-alias amminstalld="adb install -d -r  buck-out/gen/app/amm_app_preview_debug.apk"
+alias amminstall="adb install -r ./app/build/outputs/apk/app-debug.apk && ammstart"
+alias amminstalld="adb install -r -d ./app/build/outputs/apk/app-debug.apk && ammstart"
+alias appinstall="adb install -r bin/MainActivity-debug.apk"
 alias ammcrash="adb logcat -v time process  | grep -e 'MMCrashReporter' -e 'AndroidRuntime'"
 alias ammcrashc="logcatc  | grep -e 'MMCrashReporter' -e 'AndroidRuntime'"
+alias logcatd="adb logcat -v threadtime process "
+alias aiqiyi="you-get --format=fullhd "
+alias installdebug="./gradlew :app:installdebug"
+alias cclean="./gradlew clean"
+
+
+
+alias androidmmmem1="adb shell dumpsys meminfo"
+alias androidmmmem2="adb shell cat /proc/meminfo"
+alias androidmmmem3="adb shell procrank"
+
+
+alias androidtips="echo -e '\nmeminfo: \nadb shell dumpsys meminfo \nadb shell cat /proc/meminfo  \nadb shell procrank  \n\n\ninstall:\ninstalldebug-->./gradlew :app:installdebug\ncclean'"

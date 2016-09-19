@@ -1,6 +1,6 @@
 [user]
-	name = foreverzeus
-	email = foreverzeus@qq.com
+	name = zeushuang
+	email = zeushuang@tencent.com
 
 [github]
     user = zanshin
@@ -29,7 +29,7 @@
     editor = vim 
     autocrlf = input
     safecrlf = warn
-    excludesfile = /Users/mark/.gitignore_global
+	excludesfile = /Users/foreverzeus/.gitignore_global
     quotepath = false
 
 [diff]
@@ -50,6 +50,9 @@
     tags = tag -l
     branches = branch -a
     remotes = remote -v
+	st = status
+	co = checkout
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [push]
     # simple is the new default, requires > 1.7
@@ -58,3 +61,11 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = store

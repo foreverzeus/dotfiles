@@ -1,12 +1,12 @@
 # Currently this path is appended to dynamically when picking a ruby version
 # zshenv has already started PATH with rbenv so append only here
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/bin
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/
 export JAVA_HOME
 export PATH=${JAVA_HOME}/bin:$PATH
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 export PATH=$PATH:/usr/local/sbin:$HOME/bin
-export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/platform-tools/
+export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/platform-tools
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/tools/
 export ANDROID_HOME=/Users/foreverzeus/coding/android/sdk/
 export ANT_HOME=/Users/foreverzeus/coding/android/apache-ant-1.8.3/
@@ -18,13 +18,18 @@ export PATH=$PATH:$COCOS2DX_ROOT
 export COCOS_CONSOLE_ROOT=${COCOS2DX_ROOT}/tools/cocos2d-console/bin
 export PATH=$PATH:$COCOS_CONSOLE_ROOT
 
-export NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r9c
-export ANDROID_NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r9c
+export NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
+export ANDROID_NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
 export PATH=$PATH:$ANDROID_NDK_ROOT
 export CODINGROOT=/Users/foreverzeus/workspace/zeusspace/codebox
 
 # apk tools
 export PATH=${PATH}:/Users/foreverzeus/Dropbox/apk_tools/dex2jar-0.0.9.15
+export GRADLE_HOME=/Users/foreverzeus/coding/android/gradle-2.2.1-bin/gradle-2.2.1
+export PATH=${PATH}:$GRADLE_HOME/bin
+
+export PATH=${PATH}:/Users/foreverzeus/coding/source/android_build/bin
+export PATH=${PATH}:/Users/foreverzeus/coding/android/work_tools
 
 # remove duplicate entries
 typeset -U PATH
