@@ -252,27 +252,30 @@ alias kthxbai='halt'
 
 #alias logcatc='logcat-color'
 alias logcatc="adb logcat -C -v threadtime process "
-alias findui="adb logcat -C -v threadtime process | grep -i checktask"
+alias findui="adb logcat -v threadtime process | grep -i checktask"
 #alias logmm="adb logcat -C -v time process  | grep  `adb shell ps | egrep 'com.tencent.mm' | grep -v 'push' | grep -v 'cool' | awk '{print $2}'` | grep -v 'D/StrictMode'"
 #alias cocos='cd /Users/foreverzeus/coding/cocos2d-x-2.2.2/tools/project-creator'
 alias ammstart="adb shell am start -n com.tencent.mm/.ui.LauncherUI"
-alias amminstall="adb install -r ./app/build/outputs/apk/app-debug.apk && ammstart"
-alias amminstalld="adb install -r -d ./app/build/outputs/apk/app-debug.apk && ammstart"
+alias amminstall="adb install -r ./boot/build/outputs/apk/boot-debug.apk && ammstart"
+alias amminstalld="adb install -r -d ./boot/build/outputs/apk/boot-debug.apk && ammstart"
 alias appinstall="adb install -r bin/MainActivity-debug.apk"
 alias ammcrash="adb logcat -v time process  | grep -e 'MMCrashReporter' -e 'AndroidRuntime' -e 'MicroMsg_Crash'"
 alias ammcrashc="logcatc  | grep -e 'MMCrashReporter' -e 'AndroidRuntime'"
 alias logcatd="adb logcat -v threadtime process "
 alias aiqiyi="you-get --format=fullhd "
-alias installdebug="./gradlew :app:installdebug"
-alias builddebug="./gradlew :app:assembleDebug"
-alias genautogen="./gradlew :app:generateDebugAutoGen"
+alias installdebug="./gradlew :boot:installdebug"
+alias builddebug="./gradlew :boot:assembleDebug"
+alias genautogen="./gradlew :boot:generateDebugAutoGen"
 alias cclean="./gradlew clean"
+alias wctenpay="logcatd | grep -e 'MicroMsg.NetScenePayBase' -e 'MicroMsg.NetSenceTenPayBase'"
 
 
 
 alias androidmmmem1="adb shell dumpsys meminfo"
 alias androidmmmem2="adb shell cat /proc/meminfo"
 alias androidmmmem3="adb shell procrank"
+
+alias opensc2="cd /Users/foreverzeus/Library/Application\ Support/Blizzard/StarCraft\ II/Accounts/204156102/5-S2-1-2785663/Replays/Multiplayer"
 
 
 alias androidtips="echo -e '\nmeminfo: \nadb shell dumpsys meminfo \nadb shell cat /proc/meminfo  \nadb shell procrank  \n\n\ninstall:\ninstalldebug-->./gradlew :app:installdebug\ncclean'"

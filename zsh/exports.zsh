@@ -9,15 +9,17 @@ export PATH=$PATH:/usr/local/sbin:$HOME/bin
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/platform-tools
 export PATH=${PATH}:/Users/foreverzeus/coding/android/sdk/tools/
 export ANDROID_HOME=/Users/foreverzeus/coding/android/sdk/
-export ANT_HOME=/Users/foreverzeus/coding/android/apache-ant-1.8.3/
+export ANDROID_SDK=/Users/foreverzeus/coding/android/sdk/
+export ANT_HOME=/Users/foreverzeus/coding/android/apache-ant-1.9.9/
 export PATH=${PATH}:${ANT_HOME}/bin
 export PATH=${PATH}:/Users/foreverzeus/workspace/zeusspace/codebox/tools
 
-export COCOS2DX_ROOT=/Users/foreverzeus/coding/cocos2d-x-3.1.1
+export COCOS2DX_ROOT=/Users/foreverzeus/workspace/wechat/cross_wx/cocos-x/cocos2d-x-3.15
 export PATH=$PATH:$COCOS2DX_ROOT
 export COCOS_CONSOLE_ROOT=${COCOS2DX_ROOT}/tools/cocos2d-console/bin
 export PATH=$PATH:$COCOS_CONSOLE_ROOT
 
+export NDK=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
 export NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
 export ANDROID_NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
 export PATH=$PATH:$ANDROID_NDK_ROOT
@@ -30,6 +32,9 @@ export PATH=${PATH}:$GRADLE_HOME/bin
 
 export PATH=${PATH}:/Users/foreverzeus/coding/source/android_build/bin
 export PATH=${PATH}:/Users/foreverzeus/coding/android/work_tools
+
+export PATH=${PATH}:/Users/foreverzeus/workspace/wechat/cross_wx/buck/bin
+
 
 # remove duplicate entries
 typeset -U PATH
