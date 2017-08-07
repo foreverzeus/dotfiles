@@ -270,7 +270,7 @@ alias cclean="./gradlew clean"
 alias wctenpay="logcatd | grep -e 'MicroMsg.NetScenePayBase' -e 'MicroMsg.NetSenceTenPayBase'"
 
 
-
+alias android-cmake='cmake -DCMAKE_TOOLCHAIN_FILE=/Users/foreverzeus/coding/android/sdk/cmake/3.6.3155560/android.toolchain.cmake'  
 alias androidmmmem1="adb shell dumpsys meminfo"
 alias androidmmmem2="adb shell cat /proc/meminfo"
 alias androidmmmem3="adb shell procrank"
@@ -279,3 +279,8 @@ alias opensc2="cd /Users/foreverzeus/Library/Application\ Support/Blizzard/StarC
 
 
 alias androidtips="echo -e '\nmeminfo: \nadb shell dumpsys meminfo \nadb shell cat /proc/meminfo  \nadb shell procrank  \n\n\ninstall:\ninstalldebug-->./gradlew :app:installdebug\ncclean'"
+
+alias kindacrash="$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -C -f -e /Users/foreverzeus/workspace/wechat/cross_wx/kinda_master/example_android/app/.externalNativeBuild/cmake/debug/armeabi/lib.target/libkinda_android.so"
+
+alias gitbbpush="git push bitbucket "
+alias gitbbpull="git pull bitbucket "

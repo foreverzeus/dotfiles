@@ -19,9 +19,9 @@ export PATH=$PATH:$COCOS2DX_ROOT
 export COCOS_CONSOLE_ROOT=${COCOS2DX_ROOT}/tools/cocos2d-console/bin
 export PATH=$PATH:$COCOS_CONSOLE_ROOT
 
-export NDK=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
-export NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
-export ANDROID_NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r10e
+export NDK=/Users/foreverzeus/coding/android/ndk/android-ndk-r14b
+export NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r14b
+export ANDROID_NDK_ROOT=/Users/foreverzeus/coding/android/ndk/android-ndk-r14b
 export PATH=$PATH:$ANDROID_NDK_ROOT
 export CODINGROOT=/Users/foreverzeus/workspace/zeusspace/codebox
 
